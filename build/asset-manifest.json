@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.14061fab.css",
+    "main.js": "/static/js/main.8806872b.js",
+    "static/media/IMG_0826.JPG": "/static/media/IMG_0826.1d0bc730ba1cd3b760e7.JPG",
+    "static/media/PWP_Logo_Hor_RGB.png.jpg": "/static/media/PWP_Logo_Hor_RGB.png.08a50756f0b99e896482.jpg",
+    "static/media/Screenshot 2026-04-08 at 10.18.10 AM.png": "/static/media/Screenshot 2026-04-08 at 10.18.10 AM.57cc777b2a130a8087f1.png",
+    "index.html": "/index.html",
+    "main.14061fab.css.map": "/static/css/main.14061fab.css.map",
+    "main.8806872b.js.map": "/static/js/main.8806872b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14061fab.css",
+    "static/js/main.8806872b.js"
+  ]
+}

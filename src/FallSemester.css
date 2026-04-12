@@ -1,0 +1,91 @@
+.fall-container {
+  min-height: 100vh;
+  padding: 60px;
+  font-family: "Lora", serif;
+  background-color: #fffbf1;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.fall-title {
+  font-size: 64px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.fall-text {
+  font-size: 1.5vw;
+  line-height: 1.7;
+}
+
+.fall-link {
+  display: inline-block;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.fall-image {
+  margin-top: 10px;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.fall-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.fall-section-title {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.fall-subtitle {
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.fall-equation {
+  font-family: "Courier New", monospace;
+  background: #e1e0dd;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.equation-wrapper {
+  text-align: center;
+}
+.fall-quote {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #777; /* gray text */
+  font-style: italic; /* makes it feel like a quote */
+  border-left: 3px solid #ddd;
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+}
+.fall-caption {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 0.5rem;
+}

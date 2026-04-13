@@ -1,1 +1,1 @@
-This contains the clean React copy of the code
+This is the final payoff website for WRI270/271

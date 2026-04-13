@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/payoffCopy/static/css/main.c4e3cf2d.css",
-    "main.js": "/payoffCopy/static/js/main.95dd172a.js",
+    "main.css": "/payoffCopy/static/css/main.16a7e99a.css",
+    "main.js": "/payoffCopy/static/js/main.7d899fd6.js",
     "static/media/IMG_0826.JPG": "/payoffCopy/static/media/IMG_0826.1d0bc730ba1cd3b760e7.JPG",
     "static/media/intel.png": "/payoffCopy/static/media/intel.472c1a10c27e7bf1e277.png",
     "static/media/Screenshot 2026-04-11 at 1.31.17 PM.png": "/payoffCopy/static/media/Screenshot 2026-04-11 at 1.31.17 PM.4c1663c5aae4b56e169a.png",
@@ -12,7 +12,6 @@
     "static/media/final1.png": "/payoffCopy/static/media/final1.e7aaa38cc0c98739d6f6.png",
     "static/media/PWP_Logo_Hor_RGB.png.jpg": "/payoffCopy/static/media/PWP_Logo_Hor_RGB.png.08a50756f0b99e896482.jpg",
     "static/media/final4.png": "/payoffCopy/static/media/final4.dcf2f0eb1e1fa6bc8b3a.png",
-    "static/media/payoff2.png": "/payoffCopy/static/media/payoff2.72ea803a91d39de240b7.png",
     "static/media/friendcenter.jpg": "/payoffCopy/static/media/friendcenter.27885f3965b492d83502.jpg",
     "static/media/final3.png": "/payoffCopy/static/media/final3.a4b8b0e9c65c6a703a00.png",
     "static/media/final2.png": "/payoffCopy/static/media/final2.a75293109174278f9832.png",
@@ -25,11 +24,11 @@
     "static/media/background3.png": "/payoffCopy/static/media/background3.e229b4119c93d08c7759.png",
     "static/media/Research Integrity & Assurance_RIA Website Black-02.png.webp": "/payoffCopy/static/media/Research Integrity & Assurance_RIA Website Black-02.png.43d4f28e0383506a2e86.webp",
     "index.html": "/payoffCopy/index.html",
-    "main.c4e3cf2d.css.map": "/payoffCopy/static/css/main.c4e3cf2d.css.map",
-    "main.95dd172a.js.map": "/payoffCopy/static/js/main.95dd172a.js.map"
+    "main.16a7e99a.css.map": "/payoffCopy/static/css/main.16a7e99a.css.map",
+    "main.7d899fd6.js.map": "/payoffCopy/static/js/main.7d899fd6.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4e3cf2d.css",
-    "static/js/main.95dd172a.js"
+    "static/css/main.16a7e99a.css",
+    "static/js/main.7d899fd6.js"
   ]
 }

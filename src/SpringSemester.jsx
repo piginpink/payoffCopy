@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SpringSemester.css";
 import fc from "./friendcenter.jpg";
@@ -6,11 +7,89 @@ import irb from "./Research Integrity & Assurance_RIA Website Black-02.png.webp"
 import keller from "./100.jpeg";
 import csv from "./csv file.png";
 import semantic from "./semantic.png";
-import final1 from "./payoff1.png";
-import final2 from "./payoff2.png";
+
 import PCA1 from "./PCA1";
 
+const surveyCategories = [
+  {
+    title: "Core Values",
+    items: [
+      "Honesty should always be prioritized, even if it hurts someone's feelings.",
+      "Religion or spirituality is an important part of my life.",
+      "Political beliefs are important in choosing a partner.",
+      "Family should always come before career.",
+      "Personal independence in a relationship is very important to me.",
+      "Helping others and giving back to society is important to me.",
+    ],
+  },
+  {
+    title: "Lifestyle Preferences",
+    items: [
+      "I prefer a structured daily routine.",
+      "I like to go out socially (restaurants, parties, events) frequently.",
+      "Financial saving is more important than spending on experiences.",
+      "I value having a lot of personal time alone.",
+      "I prefer living in a quiet environment rather than a busy one.",
+      "Physical health and exercise are a major priority for me.",
+    ],
+  },
+  {
+    title: "Communication",
+    items: [
+      "I prefer to talk through problems immediately.",
+      "I am comfortable discussing my emotions openly.",
+      "Frequent communication (texts/calls) is important in a relationship.",
+      "I prefer direct and honest communication, even if it feels blunt.",
+      "I feel comfortable sharing personal struggles with my partner.",
+      "I prefer resolving misunderstandings quickly rather than letting things cool down.",
+    ],
+  },
+  {
+    title: "Intimacy",
+    items: [
+      "Physical affection (hugging, touching, etc.) is very important to me.",
+      "Verbal expressions of love are important in a relationship.",
+      "Sexual compatibility is essential for a successful relationship.",
+      "I enjoy spending a lot of quality time with my partner.",
+      "Romantic gestures (dates, surprises) are important to me.",
+      "I prefer frequent expressions of affection.",
+    ],
+  },
+  {
+    title: "Conflict / Problem Solving",
+    items: [
+      "Arguments should be resolved before going to sleep.",
+      "Compromise is the most important way to solve conflicts.",
+      "It is important to apologize quickly after an argument.",
+      "I prefer calm discussions rather than emotional arguments.",
+      "Taking time apart during conflict can be helpful.",
+      "I believe disagreements can strengthen relationships.",
+    ],
+  },
+  {
+    title: "Future Goals",
+    items: [
+      "I want to get married eventually.",
+      "Having children is important to me.",
+      "Career success is a top life priority for me.",
+      "I would be willing to move to another city or country for my partner.",
+      "Financial stability is necessary before major life decisions.",
+      "Long-term planning is important in my life.",
+    ],
+  },
+  {
+    title: "Relationship Certainty",
+    items: [
+      "I feel confident about the long-term future of this relationship.",
+      "I sometimes worry that my partner and I want different things in life.",
+      "I believe my partner and I are highly compatible overall.",
+    ],
+  },
+];
+
 function SpringSemester() {
+  const [openIndex, setOpenIndex] = useState(null);
+
   return (
     <div className="spring-container">
       <h1 className="spring-title">Spring Semester</h1>
@@ -72,10 +151,10 @@ function SpringSemester() {
           Initially, I thought I could create a mobile app, but realistically, I
           have never even built a website application, which is arguably easier.
           Thus, I decided to begin there. On a high level, users would input
-          their data, and a machine learning algorithm would analyze those
-          inputs to search for someone who had a similar dataset. However, this
-          raised a more difficult question– what kind of data should be used to
-          determine this match.
+          their data and a machine learning algorithm would analyze those inputs
+          to search for someone who had a similar dataset. However, this raised
+          a more difficult question– what kind of data should be used to
+          determine this match?
           <div className="image-wrapper">
             <img src={music} alt="music" className="spring-image" />
           </div>
@@ -111,9 +190,10 @@ function SpringSemester() {
             or sustain a long-term relationship.
           </p>
           <p>
-            The most relevant framework came from Susan Sprecher, who outlined
-            three major principles of compatibility similarity, complementarity,
-            and matching on socially desirable traits{" "}
+            The most relevant framework that detailed compatability came from
+            Susan Sprecher, who outlined three major principles of
+            compatibility: similarity, complementarity, and matching on socially
+            desirable traits{" "}
             <a
               href="https://www.researchgate.net/publication/260838492_Relationship_Compatibility_Compatible_Matches_and_Compatibility_Matching"
               target="_blank"
@@ -129,15 +209,15 @@ function SpringSemester() {
             from social networks, also plays a significant role.
           </p>
           <p>
-            All of these studies reveal that most existing research identifies
-            patterns of similarity or attraction, but does not definitively show
-            how to predict compatibility using data alone. Thus, my question
-            reformed: can AI be used to determine compatibility? How much does
-            similarity play in the role of compatibility? In order to explore
-            this, I needed to train my model on questions answered by real
-            couples. By putting their responses into an algorithm, I could
-            attempt to predict compatibility between individuals based on how
-            they answer the same questions.
+            All of these studies reveal that existing research identifies
+            patterns of similarity, but does not show how to predict
+            compatibility using data. Thus, my question reformed: can AI be used
+            to determine compatibility? How much does similarity play in the
+            role of compatibility? In order to explore this, I needed to train
+            my model on questions answered by real couples. By putting their
+            responses into an algorithm, I could attempt to predict
+            compatibility between other individuals based on how they answer the
+            same questions.
           </p>
         </p>
 
@@ -165,7 +245,7 @@ function SpringSemester() {
             [3]
           </a>
           . Additionally, Margaret S. Clark emphasizes that different
-          relationship dynamics require different evaluative dimensions,
+          relationship dynamics require different evaluative metrics,
           reinforcing the need for a multidimensional survey design{" "}
           <a
             href="https://psycnet.apa.org/record/2011-21802-013"
@@ -175,154 +255,39 @@ function SpringSemester() {
           >
             [3]
           </a>
-          . Thus, the questions were chosen to be split into 6 core topics: core
-          values, lifestyle preferences, communication, intimacy,
-          conflict/problem solving, future goals. There will be a final question
-          where they self-report the quality of their relationship which would
-          help compare similarity of responses between partners and how strongly
-          they view their relationship.
+          . Thus, the my survey questions were chosen to be split into 6 core
+          topics: core values, lifestyle preferences, communication, intimacy,
+          conflict/problem solving, future goals. There would be a final
+          question where couples self-report the quality of their relationship,
+          which would help compare similarity of responses between partners and
+          how strongly they view their relationship.
         </p>
 
-        <div className="spring-text">
-          <details>
-            <summary>
-              <strong>Core Values</strong>
-            </summary>
-            <ul>
-              <li>
-                Honesty should always be prioritized, even if it hurts someone’s
-                feelings.
-              </li>
-              <li>Religion or spirituality is an important part of my life.</li>
-              <li>Political beliefs are important in choosing a partner.</li>
-              <li>Family should always come before career.</li>
-              <li>
-                Personal independence in a relationship is very important to me.
-              </li>
-              <li>
-                Helping others and giving back to society is important to me.
-              </li>
-            </ul>
-          </details>
-
-          <details>
-            <summary>
-              <strong>Lifestyle Preferences</strong>
-            </summary>
-            <ul>
-              <li>I prefer a structured daily routine.</li>
-              <li>
-                I like to go out socially (restaurants, parties, events)
-                frequently.
-              </li>
-              <li>
-                Financial saving is more important than spending on experiences.
-              </li>
-              <li>I value having a lot of personal time alone.</li>
-              <li>
-                I prefer living in a quiet environment rather than a busy one.
-              </li>
-              <li>Physical health and exercise are a major priority for me.</li>
-            </ul>
-          </details>
-
-          <details>
-            <summary>
-              <strong>Communication</strong>
-            </summary>
-            <ul>
-              <li>I prefer to talk through problems immediately.</li>
-              <li>I am comfortable discussing my emotions openly.</li>
-              <li>
-                Frequent communication (texts/calls) is important in a
-                relationship.
-              </li>
-              <li>
-                I prefer direct and honest communication, even if it feels
-                blunt.
-              </li>
-              <li>
-                I feel comfortable sharing personal struggles with my partner.
-              </li>
-              <li>
-                I prefer resolving misunderstandings quickly rather than letting
-                things cool down.
-              </li>
-            </ul>
-          </details>
-
-          <details>
-            <summary>
-              <strong>Intimacy</strong>
-            </summary>
-            <ul>
-              <li>
-                Physical affection (hugging, touching, etc.) is very important
-                to me.
-              </li>
-              <li>
-                Verbal expressions of love are important in a relationship.
-              </li>
-              <li>
-                Sexual compatibility is essential for a successful relationship.
-              </li>
-              <li>I enjoy spending a lot of quality time with my partner.</li>
-              <li>Romantic gestures (dates, surprises) are important to me.</li>
-              <li>I prefer frequent expressions of affection.</li>
-            </ul>
-          </details>
-
-          <details>
-            <summary>
-              <strong>Conflict / Problem Solving</strong>
-            </summary>
-            <ul>
-              <li>Arguments should be resolved before going to sleep.</li>
-              <li>Compromise is the most important way to solve conflicts.</li>
-              <li>It is important to apologize quickly after an argument.</li>
-              <li>
-                I prefer calm discussions rather than emotional arguments.
-              </li>
-              <li>Taking time apart during conflict can be helpful.</li>
-              <li>I believe disagreements can strengthen relationships.</li>
-            </ul>
-          </details>
-
-          <details>
-            <summary>
-              <strong>Future Goals</strong>
-            </summary>
-            <ul>
-              <li>I want to get married eventually.</li>
-              <li>Having children is important to me.</li>
-              <li>Career success is a top life priority for me.</li>
-              <li>
-                I would be willing to move to another city or country for my
-                partner.
-              </li>
-              <li>
-                Financial stability is necessary before major life decisions.
-              </li>
-              <li>Long-term planning is important in my life.</li>
-            </ul>
-          </details>
-
-          <details>
-            <summary>
-              <strong>Relationship Certainty</strong>
-            </summary>
-            <ul>
-              <li>
-                I feel confident about the long-term future of this
-                relationship.
-              </li>
-              <li>
-                I sometimes worry that my partner and I want different things in
-                life.
-              </li>
-              <li>I believe my partner and I are highly compatible overall.</li>
-            </ul>
-          </details>
+        <div className="accordion-wrapperspring">
+          {surveyCategories.map((cat, i) => (
+            <div className="accordion-item" key={i}>
+              <button
+                className="accordion-button"
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+              >
+                <span
+                  className={`accordion-indicator${openIndex === i ? " open" : ""}`}
+                >
+                  ▸
+                </span>
+                {cat.title}
+              </button>
+              {openIndex === i && (
+                <div className="accordion-content">
+                  <ul>
+                    {cat.items.map((item, j) => (
+                      <li key={j}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
         <h3 className="spring-subtitle">
@@ -361,10 +326,8 @@ function SpringSemester() {
           so that the user identities could not be traced back to the data.
           Initially, this process felt like an excessive amount of bureaucracy.
           However, as I worked through the IRB training and application, I began
-          to understand its importance. Without proper safeguards, it would be
-          easy to misuse or expose deeply private information. The process made
-          me realize that building technology requires innovation but also
-          ethical responsibility.
+          to understand that without proper safeguards, it would be easy to
+          misuse or expose deeply private information.
         </p>
         <div className="image-wrapper">
           <img src={keller} alt="keller" className="spring-image" />
@@ -391,7 +354,7 @@ function SpringSemester() {
           Analyzing Data and Choosing a Machine Learning Algorithm
         </h2>
         <p className="spring-text">
-          The IRB and Keller Center application made it clear that it could take
+          The IRB and Keller Center application showed me that it could take
           months before I could even gather data to analyze. This made me turn
           to generating fake data. Using ChatGPT, I generated responses for 50
           individuals (25 couples), with answers ranging from 1 (strongly
@@ -481,11 +444,16 @@ function SpringSemester() {
         <div>
           <h1>PCA Compatibility</h1>
         </div>
-        <div className="image-wrapper">
-          <img src={final1} alt="figure 1" className="spring-image2" />
+        <div className="image-wrapperPCA">
+          <iframe
+            src={`${process.env.PUBLIC_URL}/question_similarity.html`}
+            title="Question Similarity Map"
+            style={{ width: "100%", height: "680px", border: "none" }}
+          />
         </div>
         <p className="spring-caption">
           <strong>Figure 6:</strong> PCA Graph Showing Similarity of Questions
+          (hover over points to see questions)
         </p>
         <p className="spring-text">
           In this graph, PC1 (13.5%) represents the strongest direction of
@@ -495,12 +463,17 @@ function SpringSemester() {
           represents a different relationship category and hovering over each
           point highlights the specific question.
         </p>
-        <div className="image-wrapper">
-          <img src={final2} alt="figure 1" className="spring-image2" />
+        <div className="image-wrapperPCA">
+          <iframe
+            src={`${process.env.PUBLIC_URL}/couple_disagreement.html`}
+            title="Average Couple Disagreement Map"
+            style={{ width: "100%", height: "680px", border: "none" }}
+          />
         </div>
         <p className="spring-caption">
-          <strong>Figure 7:</strong> PCA Graph Showing Average Variance of Each
-          Question
+          <strong>Figure 7:</strong> PCA Graph Showing Average Couple
+          Disagreement per Question (hover to see question and disagreement
+          score)
         </p>
         <p className="spring-text">
           This graph is more specific as it shows the average variance of each
@@ -537,7 +510,7 @@ function SpringSemester() {
           behaviors present in the training data, rather than the true
           complexity and patterns of real couples. As a result, while these
           findings display a pattern, it should only be viewed as a test model
-          until it is validated with survey data.
+          until validated with survey data.
         </p>
       </div>
       <Link to="/">← Back Home</Link>

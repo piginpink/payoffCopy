@@ -118,3 +118,51 @@ body {
 .text3 p {
   max-width: 850px;
 }
+
+.accordion-wrapper {
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  font-size: 2rem;
+  border-top: 1px solid #bbb;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #bbb;
+}
+
+.accordion-button {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 6px;
+  font-size: 1rem;
+  font-family: "Lora", serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+
+.accordion-button:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.accordion-indicator {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.accordion-indicator.open {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  padding: 4px 28px 14px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}

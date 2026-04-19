@@ -456,12 +456,25 @@ function SpringSemester() {
           (hover over points to see questions)
         </p>
         <p className="spring-text">
-          In this graph, PC1 (13.5%) represents the strongest direction of
+          This graph is a preliminary graph to show how similar questions are to
+          each other. This helps us determine what the x and y coordinate
+          represents. PC1 (13.5%) represents the strongest direction of
           variation and PC2(8.3%) represents the second strongest. Together they
           only capture around 22% of the structure, but enough to determine
           relative distance and relationship between questions. Each color
           represents a different relationship category and hovering over each
           point highlights the specific question.
+        </p>
+        <p className="spring-text">
+          We can see that questions surrounding communication, relationship
+          certainty, and future goals were more clumped together and stay on the
+          right side of the axis. Questions surrounding core values, lifestyle,
+          conflict, and intimacy are more variable and on the left. This could
+          indicate that PC1 measures relational state (left) vs. personal
+          identity (right). As for PC2, this axis might be capturing
+          surface-level compatibility questions (lifestyle preferences, future
+          logistics) above the x-axis and deeper emotional/physical questions
+          (intimacy, conflict) below the x-axis.
         </p>
         <div className="image-wrapperPCA">
           <iframe
@@ -479,13 +492,14 @@ function SpringSemester() {
           This graph is more specific as it shows the average variance of each
           question across all users. Notably, communication and relationship
           certainty questions form a tight cluster on the right side of the
-          graph, suggesting that they are highly similar in how people respond
-          to them. This suggests that couples who are certain about their
-          relationship also answer similarly to communication style. In contrast
-          on the left, categories like core values and intimacy are more spread
-          out, indicating greater variability in how individuals answer those
-          questions. This suggests that in a relationship, these values are more
-          subjective and open to personal interpretation.
+          graph and have low variance, suggesting that they are highly similar
+          in how couples respond to them. This suggests that couples who are
+          certain about their relationship also answer similarly to
+          communication style. In contrast on the left, categories like core
+          values and intimacy are more spread out, indicating greater
+          variability in how individuals answer those questions. This suggests
+          that in a relationship, these values are more subjective and open to
+          personal interpretation.
         </p>
         <p className="spring-text">
           The PCA visualization reveals that not all categories of questions

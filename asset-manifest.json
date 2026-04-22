@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/payoffCopy/static/css/main.f3580c83.css",
-    "main.js": "/payoffCopy/static/js/main.cae1b47a.js",
+    "main.css": "/payoffCopy/static/css/main.6b93ef43.css",
+    "main.js": "/payoffCopy/static/js/main.a89ac067.js",
     "static/media/IMG_0826.JPG": "/payoffCopy/static/media/IMG_0826.1d0bc730ba1cd3b760e7.JPG",
     "static/media/intel.png": "/payoffCopy/static/media/intel.472c1a10c27e7bf1e277.png",
     "static/media/Screenshot 2026-04-11 at 1.31.17 PM.png": "/payoffCopy/static/media/Screenshot 2026-04-11 at 1.31.17 PM.4c1663c5aae4b56e169a.png",
@@ -24,11 +24,11 @@
     "static/media/background3.png": "/payoffCopy/static/media/background3.e229b4119c93d08c7759.png",
     "static/media/Research Integrity & Assurance_RIA Website Black-02.png.webp": "/payoffCopy/static/media/Research Integrity & Assurance_RIA Website Black-02.png.43d4f28e0383506a2e86.webp",
     "index.html": "/payoffCopy/index.html",
-    "main.f3580c83.css.map": "/payoffCopy/static/css/main.f3580c83.css.map",
-    "main.cae1b47a.js.map": "/payoffCopy/static/js/main.cae1b47a.js.map"
+    "main.6b93ef43.css.map": "/payoffCopy/static/css/main.6b93ef43.css.map",
+    "main.a89ac067.js.map": "/payoffCopy/static/js/main.a89ac067.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3580c83.css",
-    "static/js/main.cae1b47a.js"
+    "static/css/main.6b93ef43.css",
+    "static/js/main.a89ac067.js"
   ]
 }

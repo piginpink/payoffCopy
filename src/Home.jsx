@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 import "./SpringSemester.css";
 import headshot from "./IMG_0826.JPG";
 import writingCenterLogo from "./PWP_Logo_Hor_RGB.png.jpg";
 import intel from "./intel.png";
-
-gsap.registerPlugin(ScrollTrigger);
+import fallImg from "./fall-logo.jpg";
+import springImg from "./spring-logo.jpg";
 
 const concentrations = [
   {
@@ -263,157 +261,104 @@ const concentrations = [
 function Home() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  useEffect(() => {
-    const sections = gsap.utils.toArray(".section");
-    const totalSections = sections.length;
-
-    const tween = gsap.to(".sections", {
-      xPercent: -100 * (totalSections - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".slider-wrapper",
-        start: "top top",
-        end: () => "+=" + window.innerWidth * (totalSections - 1),
-        scrub: true,
-        pin: ".slider",
-      },
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-      tween.kill();
-    };
-  }, []);
   return (
     <>
       <div className="slider-wrapper">
-        <div className="slider">
-          <div className="sections">
-            <div className="section text1">
-              <h2>Who is Jessica?</h2>
-              <div className="text-wrapper">
-                <p>
-                  Raised in the city of Philadelphia, I was surrounded by a very
-                  academic environment. In high school, I quickly found
-                  sanctuary in music. As such, when I came to Princeton, I knew
-                  I would major in electrical and computer engineering to
-                  satisfy my interest in devices and electronic circuits and
-                  minor in music performance with the flute.
-                </p>
-              </div>
-              <img
-                src={headshot}
-                alt="Jessica headshot"
-                className="section-image1"
-              />
-            </div>
-            <div className="section text2">
-              <h2>What is WRI270/271?</h2>
+        <div className="sections">
+          <div className="section text1">
+            <h2>Who is Jessica?</h2>
+            <div className="text-wrapper">
               <p>
-                WRI270/271: The Curious Scientist, is a two-semester sophomore
-                research seminar that guides sophomores through the process of
-                asking questions, reading existing theory, and coming up with a
-                novel approach to answering the question.
+                Raised in the city of Philadelphia, I was fortunate that the
+                Philadelphia Public School District prioritized providing
+                students with early access to academic pursuits and experiences.
+                Thanks to this exposure, I fell in love early with the problem
+                solving aspect of wiring breadboards and coding simple motors,
+                so much so that I continued to work on passion projects
+                throughout high school. As such, when I came to Princeton, I
+                knew I would major in electrical and computer engineering to
+                further my curiosity in devices and electronic circuits.
               </p>
-              <img
-                src={writingCenterLogo}
-                alt="Writing Center Logo"
-                className="section-image2"
-              />
             </div>
-
-            <div className="section text3">
-              <h2>Why did Jessica enroll in WRI270/271?</h2>
-              <p>
-                At the time, I was unsure what I wanted to do within electrical
-                engineering. I, along with all the other BSE freshmen, recently
-                declared in the spring, only have completed BSE general
-                requirements. What's more is that after declaring ECE, the
-                department requires students within the department to select one
-                out of the ten concentrations.
-              </p>
-              <div className="accordion-wrapper">
-                {concentrations.map((item, i) => (
-                  <div className="accordion-item" key={i}>
-                    <button
-                      className="accordion-button"
-                      onClick={() => setOpenIndex(openIndex === i ? null : i)}
+            <img
+              src={headshot}
+              alt="Jessica headshot"
+              className="section-image1"
+            />
+          </div>
+          <div className="section text3">
+            <h2>Why did Jessica enroll in WRI270/271?</h2>
+            <p>
+              At the time of freshman year, I was unsure what I wanted to do
+              within electrical engineering. I, along with all the other BSE
+              freshmen, recently declared in the spring, only have completed BSE
+              general requirements. What's more is that after declaring ECE, the
+              department requires students within the department to select one
+              out of the ten concentrations.
+            </p>
+            <div className="accordion-wrapper">
+              {concentrations.map((item, i) => (
+                <div className="accordion-item" key={i}>
+                  <button
+                    className="accordion-button"
+                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  >
+                    <span
+                      className={`accordion-indicator${openIndex === i ? " open" : ""}`}
                     >
-                      <span
-                        className={`accordion-indicator${openIndex === i ? " open" : ""}`}
-                      >
-                        ▸
-                      </span>
-                      {item.title}
-                    </button>
-                    {openIndex === i && (
-                      <div className="accordion-content">{item.content}</div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <p style={{ marginBottom: "70px" }}>
-                With so many important choices needing to be made with little
-                time to ponder the decision, I felt that the sophomore seminar
-                would allow me to figure out my academic interests within
-                Electrical and Computer Engineering before heading into junior
-                year and writing a senior thesis.
-              </p>
+                      ▸
+                    </span>
+                    {item.title}
+                  </button>
+                  {openIndex === i && (
+                    <div className="accordion-content">{item.content}</div>
+                  )}
+                </div>
+              ))}
             </div>
-            <div className="section section4"></div>
+            <p style={{ marginBottom: "70px" }}>
+              With so many important choices needing to be made with little time
+              to ponder the decision, I felt that the sophomore seminar would
+              allow me to figure out my academic interests within Electrical and
+              Computer Engineering before heading into junior year and writing a
+              senior thesis.
+            </p>
           </div>
         </div>
       </div>
-      {/* height changes scroll timing */}
-      <div style={{ height: "100vh", background: "rgb(255, 255, 255)" }}></div>
       <div className="after-slider">
-        <div style={{ height: "100vh", background: "rgb(255, 255, 255)" }}>
-          <h2 style={{ textAlign: "center", paddingTop: "50px" }}>
-            Dive Deeper!
-          </h2>
-          <div
-            style={{
-              textAlign: "center",
-              marginTop: "30px",
-              display: "flex",
-              gap: "40px",
-              justifyContent: "center",
-            }}
-          >
-            <Link
-              to="/fall"
-              style={{
-                fontSize: "28px",
-                textDecoration: "none",
-              }}
-            >
-              Fall Semester
+        <div style={{ height: "100vh", background: "#fffbf1" }}>
+          <h2 className="home-page-title">Dive Deeper!</h2>
+          <div className="dive-deeper-cards">
+            <Link to="/fall" className="semester-card">
+              <img
+                src={fallImg}
+                alt="Fall Semester"
+                className="semester-card-img"
+              />
+              <span className="semester-card-label">Fall Semester</span>
             </Link>
-
-            <Link
-              to="/spring"
-              style={{
-                fontSize: "28px",
-                textDecoration: "none",
-              }}
-            >
-              Spring Semester
+            <Link to="/spring" className="semester-card">
+              <img
+                src={springImg}
+                alt="Spring Semester"
+                className="semester-card-img"
+              />
+              <span className="semester-card-label">Spring Semester</span>
             </Link>
           </div>
         </div>
         <div className="home-container">
           <div className="spring-section">
-            <h2 className="spring-section-title">What is Next?</h2>
+            <h2 className="home-page-title">What is Next?</h2>
             <p className="spring-text">
               While I wait for my IRB to be approved and to collect real data, I
               will be conducting computer security research over the summer with
               the ECE department and Intel mentors. I am hoping to do work
-              relating to machine learning, and I am grateful to have been able
-              to work on this passion project that involves machine learning
-              because it will give me the practical skills to jump onto their
-              pre-existing work. Having the flexibility from designing my own
-              project also gives me the confidence that I can do the same over
-              the summer.
+              relating to machine learning, and I am grateful that the
+              compatability algorithm project provided me experience with
+              machine learning because it will give me the practical skills to
+              jump onto their pre-existing work.
             </p>
             <div className="image-wrapper">
               <img src={intel} alt="figure 1" className="spring-image2" />
@@ -443,10 +388,10 @@ function Home() {
               engineering.
             </p>
             <p className="spring-text">
-              Before this writing seminar, I had not a clue which one of the ten
-              fields I would concentrate in. After exploring signal processing
-              and machine learning, I find myself gravitating towards the mix
-              with computer security research. It combines my initial interest
+              Before this writing seminar, I didn't know which of the ten fields
+              I would concentrate in. After exploring signal processing and
+              machine learning, I find myself gravitating towards the mix in a
+              field called computer security. It combines my initial interest
               with hardware and low level programming with the higher level
               abstraction in machine learning. Now that I’ve abundantly explored
               the different sectors, I can confidently say that I am curious

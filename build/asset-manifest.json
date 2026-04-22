@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/payoffCopy/static/css/main.3e07391d.css",
-    "main.js": "/payoffCopy/static/js/main.f0b51b13.js",
+    "main.css": "/payoffCopy/static/css/main.18cfa0a6.css",
+    "main.js": "/payoffCopy/static/js/main.7d62d9d3.js",
     "static/media/IMG_0826.JPG": "/payoffCopy/static/media/IMG_0826.1d0bc730ba1cd3b760e7.JPG",
     "static/media/intel.png": "/payoffCopy/static/media/intel.472c1a10c27e7bf1e277.png",
     "static/media/Screenshot 2026-04-11 at 1.31.17 PM.png": "/payoffCopy/static/media/Screenshot 2026-04-11 at 1.31.17 PM.4c1663c5aae4b56e169a.png",
@@ -11,11 +11,13 @@
     "static/media/music_streaming_compatibility_guide_content_2_6e2015c1e8.jpg.png": "/payoffCopy/static/media/music_streaming_compatibility_guide_content_2_6e2015c1e8.jpg.c882e7ed17b6a5008b2e.png",
     "static/media/final1.png": "/payoffCopy/static/media/final1.e7aaa38cc0c98739d6f6.png",
     "static/media/PWP_Logo_Hor_RGB.png.jpg": "/payoffCopy/static/media/PWP_Logo_Hor_RGB.png.08a50756f0b99e896482.jpg",
+    "static/media/fall-logo.jpg": "/payoffCopy/static/media/fall-logo.2b47f7b25ec8dffb7bc2.jpg",
     "static/media/final4.png": "/payoffCopy/static/media/final4.dcf2f0eb1e1fa6bc8b3a.png",
     "static/media/friendcenter.jpg": "/payoffCopy/static/media/friendcenter.27885f3965b492d83502.jpg",
     "static/media/final3.png": "/payoffCopy/static/media/final3.a4b8b0e9c65c6a703a00.png",
     "static/media/final2.png": "/payoffCopy/static/media/final2.a75293109174278f9832.png",
     "static/media/background5.png": "/payoffCopy/static/media/background5.2edb2c227d3e1f630ab3.png",
+    "static/media/spring-logo.jpg": "/payoffCopy/static/media/spring-logo.790eb6d73a04bd5bf9bb.jpg",
     "static/media/background4.png": "/payoffCopy/static/media/background4.e880d320fa3c551ea311.png",
     "static/media/background6.png": "/payoffCopy/static/media/background6.d718d9f0ac877899ed7e.png",
     "static/media/background2.png": "/payoffCopy/static/media/background2.65f292357ebacae5e9c7.png",
@@ -24,11 +26,11 @@
     "static/media/background3.png": "/payoffCopy/static/media/background3.e229b4119c93d08c7759.png",
     "static/media/Research Integrity & Assurance_RIA Website Black-02.png.webp": "/payoffCopy/static/media/Research Integrity & Assurance_RIA Website Black-02.png.43d4f28e0383506a2e86.webp",
     "index.html": "/payoffCopy/index.html",
-    "main.3e07391d.css.map": "/payoffCopy/static/css/main.3e07391d.css.map",
-    "main.f0b51b13.js.map": "/payoffCopy/static/js/main.f0b51b13.js.map"
+    "main.18cfa0a6.css.map": "/payoffCopy/static/css/main.18cfa0a6.css.map",
+    "main.7d62d9d3.js.map": "/payoffCopy/static/js/main.7d62d9d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e07391d.css",
-    "static/js/main.f0b51b13.js"
+    "static/css/main.18cfa0a6.css",
+    "static/js/main.7d62d9d3.js"
   ]
 }

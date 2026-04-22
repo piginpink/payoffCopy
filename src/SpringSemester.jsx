@@ -119,7 +119,7 @@ function SpringSemester() {
         <p className="spring-text">
           After reflecting over winter break, I realized I wanted to take a step
           back from hardware and dabble in software. I never intended to write
-          code at the start of this research seminar, but decided to give it a
+          code at the start of this research seminar, but I decided to give it a
           chance because it gave me the flexibility to design and code an app or
           website that fit to my personal interest projects. This was different
           from hardware, which often required purchasing material before
@@ -150,11 +150,12 @@ function SpringSemester() {
         <p className="spring-text">
           Initially, I thought I could create a mobile app, but realistically, I
           have never even built a website application, which is arguably easier.
-          Thus, I decided to begin there. On a high level, users would input
-          their data and a machine learning algorithm would analyze those inputs
-          to search for someone who had a similar dataset. However, this raised
-          a more difficult question– what kind of data should be used to
-          determine this match?
+          Thus, I decided to begin with a website. On a high level, users would
+          input their data onto the site and a machine learning algorithm would
+          analyze those inputs to search for a user who has a similar dataset.
+          However, this raised a more difficult question– what kind of data
+          should be used to determine this match? What metric should be used to
+          determine this compatability?
           <div className="image-wrapper">
             <img src={music} alt="music" className="spring-image" />
           </div>
@@ -217,7 +218,7 @@ function SpringSemester() {
             my model on questions answered by real couples. By putting their
             responses into an algorithm, I could attempt to predict
             compatibility between other individuals based on how they answer the
-            same questions.
+            same question asked to the real couples.
           </p>
         </p>
 
@@ -235,7 +236,9 @@ function SpringSemester() {
             className="spring-link"
           >
             [2]
-          </a>
+          </a>{" "}
+          This suggested to be that I needed the questions to cover a range of
+          topics that covers both personal values and interpersonal dynamics
           <a
             href="https://psycnet.apa.org/record/2000-05468-011"
             target="_blank"
@@ -246,7 +249,7 @@ function SpringSemester() {
           </a>
           . Additionally, Margaret S. Clark emphasizes that different
           relationship dynamics require different evaluative metrics,
-          reinforcing the need for a multidimensional survey design{" "}
+          reinforcing the need for a multi-topic survey design{" "}
           <a
             href="https://psycnet.apa.org/record/2011-21802-013"
             target="_blank"
@@ -255,12 +258,12 @@ function SpringSemester() {
           >
             [3]
           </a>
-          . Thus, the my survey questions were chosen to be split into 6 core
-          topics: core values, lifestyle preferences, communication, intimacy,
-          conflict/problem solving, future goals. There would be a final
-          question where couples self-report the quality of their relationship,
-          which would help compare similarity of responses between partners and
-          how strongly they view their relationship.
+          . Thus, I split my survey questions into 6 core topics: core values,
+          lifestyle preferences, communication, intimacy, conflict/problem
+          solving, future goals. There would be a final question where couples
+          self-report the quality of their relationship, which would help
+          compare similarity of responses between partners and how strongly they
+          view their relationship.
         </p>
 
         <div className="accordion-wrapperspring">
@@ -312,22 +315,19 @@ function SpringSemester() {
           Before I could distribute the survey, I needed to submit my project to
           the IRB for approval. This process forced me to think beyond the
           technical aspects of building a machine learning model and instead,
-          consider the ethical implications of my work. In my application, I had
-          to clearly justify how I would protect participant data, ensure that
-          the study would not cause harm, and outline how informed consent would
-          be obtained.
+          consider the ethical implications of my work.
         </p>
 
         <p className="spring-text">
           Because my survey contained sensitive, personal information about
           people’s values and habits, I had to design a system where the
-          responses could be analyzed but anonymized. This meant I had to
-          separate consent forms from survey responses using paired ID numbers,
-          so that the user identities could not be traced back to the data.
-          Initially, this process felt like an excessive amount of bureaucracy.
-          However, as I worked through the IRB training and application, I began
-          to understand that without proper safeguards, it would be easy to
-          misuse or expose deeply private information.
+          responses could be protected. This meant I had to separate consent
+          forms from survey responses using paired ID numbers, so that the user
+          identities could not be traced back to the data. Initially, this
+          process felt like an excessive amount of bureaucracy. However, as I
+          worked through the IRB training and application, I began to understand
+          that without proper safeguards, it would be easy to misuse or expose
+          deeply private information.
         </p>
         <div className="image-wrapper">
           <img src={keller} alt="keller" className="spring-image" />
@@ -339,7 +339,7 @@ function SpringSemester() {
         <p className="spring-text">
           After submitting the IRB application, I began thinking about how to
           recruit participants. Because my study required responses from both
-          individuals in a couple, participation demanded a significant time
+          individuals in a couple, participation demands a significant time
           commitment. To increase the likelihood of completion, I applied for
           funding with the Keller Center in hopes of sending out gift cards to
           participants.
@@ -470,11 +470,11 @@ function SpringSemester() {
           certainty, and future goals were more clumped together and stay on the
           right side of the axis. Questions surrounding core values, lifestyle,
           conflict, and intimacy are more variable and on the left. This could
-          indicate that PC1 measures relational state (left) vs. personal
-          identity (right). As for PC2, this axis might be capturing
-          surface-level compatibility questions (lifestyle preferences, future
-          logistics) above the x-axis and deeper emotional/physical questions
-          (intimacy, conflict) below the x-axis.
+          indicate that PC1 measures relational state left of the y-axis and
+          personal identity right of the y-axis. As for PC2, this axis might be
+          capturing surface-level compatibility questions (lifestyle
+          preferences, future logistics) above the x-axis and deeper
+          emotional/physical questions (intimacy, conflict) below the x-axis.
         </p>
         <div className="image-wrapperPCA">
           <iframe
@@ -502,14 +502,13 @@ function SpringSemester() {
           personal interpretation.
         </p>
         <p className="spring-text">
-          The PCA visualization reveals that not all categories of questions
-          behave equally in terms of how couples respond to them. Questions
-          relating to communication and relationship strength exhibit lower
-          variance and are more clustered together, while questions regarding
-          core values and intimacy spread further. These patterns show that both
-          similarity and differences are required for partnership. It affirms
-          the notion that compatibility is not just maximizing similarly across
-          all dimensions, but rather balancing similarity and differences in all
+          To summarize the relational data in the PCA visualization, successful
+          partners should have similar communciation styles. On the other hand,
+          core values and intimacy patterns can be more different and not affect
+          relationship success. These patterns also show that both similarity
+          and differences are required for partnership. It affirms the notion
+          that compatibility is not just maximizing similarly across all
+          dimensions, but rather balancing similarity and differences in all
           aspects of a relationship.
         </p>
         <p className="spring-text">

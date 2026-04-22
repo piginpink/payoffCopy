@@ -23,8 +23,8 @@ body {
 }
 
 .fall-link {
-  display: inline-block;
-  font-size: 22px;
+  display: inline;
+  font-size: inherit;
   text-decoration: none;
 }
 

@@ -22,7 +22,7 @@ function FallSemester() {
         <p className="fall-text">
           Over the summer, I reached out to a couple of ECE professors with the
           interest of joining their lab in the fall. Dr. Yasaman Ghasempour, the
-          principal investigator of a
+          principal investigator of a{" "}
           <a
             href="https://ghasempour.princeton.edu"
             target="_blank"
@@ -31,10 +31,17 @@ function FallSemester() {
           >
             wireless technology lab
           </a>
-          , was the first one who responded and took me under her wing. I
-          decided to base my assignments in the sophomore seminar around my work
-          in the lab. My research project explored how high-frequency waves can
-          detect and map objects hidden inside packaging.
+          , was the first one who responded and took me under her wing. Due to
+          my previous experience with optics in my physics course, Dr Ghasempour
+          suggested I work with FMCW radars which uitlized similar principals to
+          optics. My research project would explore how high-frequency waves can
+          detect and map objects hidden inside packaging. With a research topic
+          chosen for the semester, I decided to base my assignments in the
+          sophomore seminar around my independent research as I could develop my
+          research skills in the seminar along side strengthening my
+          understanding of FMCW radars. The next sections will introduce the
+          global problem, introduce the background, and detail the work I did to
+          address the problem.
         </p>
       </div>
 
@@ -379,8 +386,12 @@ function FallSemester() {
           FMCW can be a replacement.
         </p>
         <p className="fall-text">
-          Take this quote from the pilot reflection which I wrote at the end of
-          the semester:
+          On a more personal level, I felt that this research experience gave me
+          a lot of practical experience with the signal processing side of ECE.
+          While I greatly appreciate the experience, I realized that I wanted to
+          explore other concentrations in hopes of finding one that would spark
+          more interest. Take this quote from the pilot reflection which I wrote
+          at the end of the semester:
         </p>
         <p className="fall-quote">
           “In terms of my career, working through researching theory and

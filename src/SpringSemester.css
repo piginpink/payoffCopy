@@ -17,10 +17,9 @@ body {
   text-align: center;
 }
 .spring-image1 {
-  width: 200%;
-  max-width: 2000px;
+  width: 100%;
+  max-width: 100%;
   border-radius: 8px;
-  justify-content: center;
 }
 .spring-image2 {
   width: 100%;
@@ -106,7 +105,11 @@ body {
   min-height: 100vh;
   padding: 60px;
   font-family: "Lora", serif;
-  background-color: #ffffff;
+  background-color: rgb(235, 229, 213);
+}
+.home-container .spring-text {
+  font-size: 1.5rem;
+  line-height: normal;
 }
 .accordion-wrapperspring {
   background-color: #e9deee;
